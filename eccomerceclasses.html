@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Croissant Class - Flourist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#f7f4f0;
+      --bg-dark:#f7f4f0;
+      --bg-card:#ffffff;
+      --bg-card-hover:#faf8f5;
+      --accent:#3d2b1f;
+      --accent-hover:#5a402e;
+      --text:#3d2b1f;
+      --text-muted:#7a6e65;
+      --text-light:#5a4f47;
+      --border:rgba(61,43,31,0.12);
+      --border-soft:rgba(61,43,31,0.08);
+    }
+    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif}
+
+    /* HEADER */
+    header{width:100%;height:32px;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:0 48px;position:fixed;top:0;left:0;z-index:2000;border-bottom:1px solid var(--border)}
+    header .left p{font-size:11px;color:var(--text-muted);letter-spacing:.02em}
+    header .right{display:flex;gap:32px}
+    header .right a{font-size:11px;text-decoration:none;color:var(--text);font-weight:500;letter-spacing:.08em;transition:color .2s}
+    header .right a:hover{color:var(--text-muted)}
+    header .right p{margin:0}
+
+    /* NAV */
+    nav{position:fixed;top:32px;left:0;width:100%;height:68px;background:rgba(247,244,240,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:1999;transition:background .3s}
+    .maindiv{width:90%;height:100%;margin:auto;display:flex;justify-content:space-between;align-items:center;overflow:visible}
+    .leftdiv{width:35%}
+    .leftdiv ul{display:flex;gap:36px;list-style:none}
+    .leftdiv a{text-decoration:none;color:var(--text);font-weight:500;font-size:11px;letter-spacing:.12em;transition:color .2s}
+    .leftdiv a:hover{color:var(--text-muted)}
+    .middlediv{width:25%;display:flex;justify-content:center;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+    .middlediv .logo-text{font-family:'Playfair Display',serif;font-size:24px;letter-spacing:.2em;text-decoration:none;color:var(--text);font-weight:600}
+    .rightdiv{width:15%;display:flex;justify-content:flex-end;align-items:center}
+    .rightdiv a{text-decoration:none}
+    .rightdiv i{font-size:18px;padding-left:22px;color:var(--text);transition:color .2s}
+    .rightdiv i:hover{color:var(--text-muted)}
+    #cartIconWrap{position:relative;cursor:pointer}
+    #cartIconWrap i{font-size:18px;padding-left:22px;color:var(--text);transition:color .2s}
+    #cartIconWrap:hover i{color:var(--text-muted)}
+    #cartBadge{display:none;position:absolute;top:-8px;right:-8px;background:var(--accent);color:#fff;font-size:9px;font-weight:700;width:17px;height:17px;border-radius:50%;align-items:center;justify-content:center;font-family:'Inter',sans-serif;letter-spacing:0}
+
+    /* OVERLAY */
+    .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.3);backdrop-filter:blur(4px);opacity:0;transition:opacity .3s;z-index:2050;pointer-events:none}
+    .overlay.active{opacity:1;pointer-events:all}
+
+    /* CART PANEL */
+    .cart-panel{position:fixed;top:0;right:-500px;width:460px;height:100%;background:var(--bg);border-left:1px solid var(--border);z-index:2100;transition:right .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+    .cart-panel.open{right:0}
+    .cart-header{display:flex;justify-content:space-between;align-items:center;padding:24px 28px;border-bottom:1px solid var(--border);font-size:11px;letter-spacing:.18em;color:var(--text);font-weight:600;flex-shrink:0}
+    .cart-header button{background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-muted);transition:color .2s;line-height:1}
+    .cart-header button:hover{color:var(--text)}
+    .cart-body{flex:1;display:flex;flex-direction:column;overflow:hidden}
+    .cart-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px}
+    .cart-empty-icon{width:90px;height:90px;border-radius:50%;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+    .cart-empty-icon i{font-size:30px;color:var(--text-muted)}
+    .cart-empty-text{font-family:'Playfair Display',serif;font-size:18px;color:var(--text-muted)}
+    .btn-ghost{background:none;border:none;border-bottom:1px solid var(--text);font-size:11px;letter-spacing:.14em;cursor:pointer;color:var(--text);padding-bottom:3px;font-family:'Inter',sans-serif;font-weight:600;transition:color .2s}
+    .btn-ghost:hover{color:var(--text-muted)}
+    .cart-items-list{flex:1;overflow-y:auto;padding:0}
+    .cart-item{display:flex;align-items:flex-start;gap:14px;padding:16px 24px;border-bottom:1px solid var(--border-soft)}
+    .cart-item-img{width:68px;height:68px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .cart-item-info{flex:1;min-width:0}
+    .cart-item-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .cart-item-price{font-size:12px;color:var(--text-muted);margin-bottom:10px}
+    .cart-item-controls{display:flex;align-items:center;gap:8px}
+    .qty-btn{width:26px;height:26px;border:1px solid var(--border);background:none;border-radius:50%;font-size:15px;cursor:pointer;color:var(--text);display:flex;align-items:center;justify-content:center;transition:all .15s}
+    .qty-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .qty-num{font-size:13px;font-weight:600;color:var(--text);min-width:18px;text-align:center}
+    .remove-btn{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:12px;margin-left:6px;transition:color .2s}
+    .remove-btn:hover{color:var(--text)}
+    .cart-item-total{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;padding-top:2px;flex-shrink:0}
+    .cart-summary{padding:20px 24px 28px;border-top:1px solid var(--border);flex-shrink:0}
+    .summary-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+    .summary-label{font-size:13px;color:var(--text-muted)}
+    .summary-total{font-family:'Playfair Display',serif;font-size:20px;color:var(--text)}
+    .summary-note{font-size:11px;color:var(--text-muted);margin-bottom:18px}
+    .checkout-btn{width:100%;padding:15px;background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;transition:background .2s;margin-bottom:12px}
+    .checkout-btn:hover{background:var(--accent-hover)}
+
+    /* PDP LAYOUT */
+    .pdp-container{max-width:1200px;margin:130px auto 60px;padding:0 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+    
+    /* LEFT GALLERY */
+    .pdp-gallery{display:flex;gap:16px}
+    .pdp-thumbs{display:flex;flex-direction:column;gap:10px;width:70px}
+    .pdp-thumbs img{width:100%;height:70px;object-fit:cover;cursor:pointer;border:1px solid transparent;transition:border-color .2s;border-radius:2px}
+    .pdp-thumbs img.active, .pdp-thumbs img:hover{border-color:var(--text)}
+    .pdp-main-img{flex:1;height:520px;border-radius:2px;overflow:hidden}
+    .pdp-main-img img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .2s}
+
+    /* RIGHT DETAILS */
+    .pdp-details{display:flex;flex-direction:column}
+    .tag-pickup{display:inline-block;padding:4px 8px;border:1px solid var(--border);font-size:10px;letter-spacing:.12em;font-weight:600;margin-bottom:16px;width:fit-content;color:var(--text-muted)}
+    .pdp-rating{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text-muted);margin-bottom:12px}
+    .pdp-rating i{color:var(--text);font-size:10px}
+    .pdp-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;margin-bottom:8px;color:var(--text)}
+    .pdp-subtitle{font-size:10px;letter-spacing:.12em;font-weight:700;color:var(--text-muted);margin-bottom:20px;text-transform:uppercase}
+    .pdp-price{font-size:18px;font-weight:600;margin-bottom:24px;color:var(--text)}
+    
+    /* ACTIONS & COUNTER */
+    .pdp-actions{display:flex;gap:12px;margin-bottom:16px}
+    .qty-selector{display:flex;align-items:center;border:1px solid var(--border);background:#fff;padding:0 16px;gap:16px;font-size:13px}
+    .qty-selector button{background:none;border:none;cursor:pointer;color:var(--text);font-size:16px;font-weight:600;padding:8px 4px}
+    .qty-selector button:hover{color:var(--text-muted)}
+    .qty-selector span{min-width:16px;text-align:center;font-weight:600}
+    .btn-add-cart{flex:1;background:var(--accent);color:#fff;border:none;padding:16px;font-size:11px;font-weight:700;letter-spacing:.14em;cursor:pointer;transition:background .2s}
+    .btn-add-cart:hover{background:var(--accent-hover)}
+    
+    .pdp-installments{font-size:11px;color:var(--text-muted);line-height:1.6;margin-bottom:24px}
+    .pdp-installments a{color:var(--text);text-decoration:underline}
+    .origin-tag{font-size:11px;font-weight:600;letter-spacing:.08em;display:flex;align-items:center;gap:6px;margin-bottom:24px;color:var(--text)}
+
+    .pdp-description-title{font-size:11px;letter-spacing:.12em;font-weight:700;text-transform:uppercase;border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:12px}
+    .pdp-description-text{font-size:13px;color:var(--text-light);line-height:1.7;margin-bottom:16px}
+    .read-more{font-size:12px;color:var(--text-muted);text-decoration:underline;cursor:pointer;display:inline-block;margin-bottom:32px}
+
+    /* BUY IT WITH */
+    .buy-it-with{background:#efece6;padding:20px;border-radius:2px}
+    .buy-it-with-title{font-size:10px;font-weight:700;letter-spacing:.14em;margin-bottom:16px;text-transform:uppercase}
+    .buy-item{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+    .buy-item:last-child{margin-bottom:0}
+    .buy-item img{width:50px;height:50px;object-fit:cover;border-radius:2px}
+    .buy-item-info{flex:1}
+    .buy-item-name{font-family:'Playfair Display',serif;font-size:13px;margin-bottom:4px}
+    .buy-item-price{font-size:11px;color:var(--text-muted);margin-bottom:6px}
+    .btn-quickview{background:var(--accent);color:#fff;border:none;padding:6px 12px;font-size:9px;font-weight:700;letter-spacing:.12em;cursor:pointer;transition:background .2s}
+    .btn-quickview:hover{background:var(--accent-hover)}
+
+    /* FEATURED GRID */
+    .featured-grid-section{max-width:1200px;margin:80px auto;padding:0 40px}
+    .featured-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:24px}
+    .grid-card{background:transparent;cursor:pointer}
+    .grid-card img{width:100%;height:260px;object-fit:cover;margin-bottom:12px;display:block;border-radius:2px}
+    .grid-card-title{font-family:'Playfair Display',serif;font-size:14px;margin-bottom:4px;color:var(--text)}
+    .grid-card-price{font-size:12px;color:var(--text-muted)}
+
+    /* REVIEWS SECTION */
+    .reviews-section{max-width:900px;margin:80px auto;padding:0 20px;text-align:center}
+    .reviews-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;margin-bottom:16px}
+    .reviews-summary{display:flex;align-items:center;justify-content:center;gap:12px;font-size:14px;margin-bottom:24px}
+    .reviews-stars{color:var(--text);font-size:12px}
+    .btn-write-review{background:none;border:1px solid var(--border);padding:8px 16px;font-size:11px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin-bottom:30px}
+    
+    .reviews-filter-bar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:32px;font-size:12px;color:var(--text-muted)}
+    .review-list{text-align:left;display:flex;flex-direction:column;gap:32px}
+    .review-item{display:flex;flex-direction:column;gap:6px}
+    .review-header{display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted)}
+    .review-author{font-weight:600;color:var(--text)}
+    .review-body-title{font-weight:700;font-size:13px;margin-top:4px}
+    .review-body-text{font-size:12px;color:var(--text-light);line-height:1.6}
+
+    /* FOOTER */
+    .company{background:var(--bg-dark);width:100%;padding:72px 0 0;border-top:1px solid var(--border)}
+    .companymain{width:90%;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:48px;padding-bottom:60px}
+    .dcompany p{font-family:'Inter',sans-serif;font-weight:400;padding:0 0 10px;font-size:11px;color:var(--text-muted);line-height:2;cursor:pointer;transition:color .2s;letter-spacing:.05em}
+    .dcompany p:hover{color:var(--text)}
+    .dcompany p:first-child{font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--text);cursor:default}
+    .dcompany p:first-child:hover{color:var(--text)}
+    .dcompany h3{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--text);padding-bottom:16px}
+    .ddflex{display:flex;gap:18px;margin-top:36px;font-size:16px}
+    .ddflex div{cursor:pointer;color:var(--text-muted);transition:color .2s}
+    .ddflex div:hover{color:var(--text)}
+    .newsletter-input{width:100%;max-width:340px;background:none;border:none;border-bottom:1px solid var(--border);font-family:'Inter',sans-serif;font-size:12px;padding-bottom:10px;margin-top:12px;color:var(--text);outline:none;transition:border-color .2s}
+    .newsletter-input::placeholder{color:var(--text-muted)}
+    .newsletter-input:focus{border-bottom-color:var(--text)}
+    footer{width:100%;background:var(--bg-dark);border-top:1px solid rgba(61,43,31,0.08);display:flex;gap:32px;padding:24px 48px;align-items:center}
+    footer div h3{font-family:'Inter',sans-serif;font-weight:400;font-size:10px;letter-spacing:.1em;color:var(--text-muted);cursor:pointer;transition:color .2s}
+    footer div h3:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="left"><p>We offer local delivery and flat rate shipping to the USA and Canada.</p></div>
+  <div class="right">
+    <div><a href="#"><p>MILL + BAKERY</p></a></div>
+    <div><a href="#"><p>REWARDS CLUB</p></a></div>
+    <div><a href="#"><p>ORDER PIZZA</p></a></div>
+  </div>
+</header>
+
+<nav>
+  <div class="maindiv">
+    <div class="leftdiv">
+      <ul>
+        <li>
+          <a href="ecommerce.html"><span>SHOP</span></a>
+        </li>
+        <li><a href="ecommerceabout.html"><span>ABOUT</span></a></li>
+        <li><a href="ecommerserecipes.html"><span>RECIPES</span></a></li>
+        <li><a href="eccomerceclasses.html"><span>CLASSES</span></a></li>
+      </ul>
+    </div>
+    <div class="middlediv">
+      <a href="#" class="logo-text">FLOURIST</a>
+    </div>
+    <div class="rightdiv">
+      <a href="#"><i class="fa-regular fa-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <div id="cartIconWrap">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartBadge"></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <span>CART</span>
+    <button id="closeCart">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+</div>
+
+<!-- PDP SECTION -->
+<div class="pdp-container">
+  <div class="pdp-gallery">
+    <div class="pdp-thumbs">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" class="active" onclick="switchMainImage(this, 0)" alt="Croissant Class">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" onclick="switchMainImage(this, 2)" alt="Sourdough Bread Class">
+    </div>
+    <div class="pdp-main-img">
+      <img id="mainImage" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" alt="Croissant Class">
+    </div>
+  </div>
+
+  <div class="pdp-details">
+    <span class="tag-pickup">STORE PICKUP</span>
+    <div class="pdp-rating">
+      <div>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <span>3 reviews</span>
+    </div>
+    <h1 class="pdp-title" id="pdpTitle">Croissant Class</h1>
+    <p class="pdp-subtitle" id="pdpSubtitle">NEW DATES WILL BE ANNOUNCED IN THE FALL!</p>
+    <div class="pdp-price" id="pdpPrice">$195.00</div>
+
+    <div class="pdp-actions">
+      <div class="qty-selector">
+        <button id="btnMinus" onclick="updateMainQty(-1)">-</button>
+        <span id="pdpQty">1</span>
+        <button id="btnPlus" onclick="updateMainQty(1)">+</button>
+      </div>
+      <button class="btn-add-cart" id="addToCartBtn" onclick="addMainProductToCart()">ADD TO CART • $195.00</button>
+    </div>
+
+    <div class="pdp-installments">
+      4 interest-free installments, or from <strong>$17.60/mo</strong> with <strong>shop Pay</strong> <a href="#">View sample plans</a>
+    </div>
+
+    <div class="origin-tag">
+      <i class="fa-solid fa-leaf"></i> MADE IN CANADA
+    </div>
+
+    <div class="pdp-description-title">DESCRIPTION</div>
+    <div class="pdp-description-text" id="pdpDescription">
+      We are so excited to welcome you to the bakery for our new Croissant Class! Learn how to make croissants at home step by step at our beautiful bakery.
+      <br><br>
+      All you have to do is show up, and we'll take you on a journey through lamination, proofing, shaping, flour, and baking...
+    </div>
+    <a class="read-more">Read more</a>
+
+    <div class="buy-it-with">
+      <div class="buy-it-with-title">BUY IT WITH</div>
+      <div class="buy-item">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=400&auto=format&fit=crop" alt="Flour">
+        <div class="buy-item-info">
+          <div class="buy-item-name">Organic Sifted Red Spring Wheat Flour</div>
+          <div class="buy-item-price">$21.95</div>
+          <button class="btn-quickview" onclick="addToCart(1, 1)">QUICK VIEW</button>
+        </div>
+      </div>
+      <div class="buy-item">
+        <img src="https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?q=80&w=400&auto=format&fit=crop" alt="Sourdough Class">
+        <div class="buy-item-info">
+          <div class="buy-item-name">Sourdough Bread Class</div>
+          <div class="buy-item-price">$195.00</div>
+          <button class="btn-quickview" onclick="addToCart(2, 1)">QUICK VIEW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED PRODUCTS GRID -->
+<div class="featured-grid-section">
+  <div class="featured-grid" id="cardsContainer"></div>
+</div>
+
+<!-- REVIEWS SECTION -->
+<div class="reviews-section">
+  <h2 class="reviews-title">Customer Reviews</h2>
+  <div class="reviews-summary">
+    <strong>5.0</strong>
+    <div class="reviews-stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <span>Based on 3 Reviews</span>
+  </div>
+
+  <button class="btn-write-review"><i class="fa-regular fa-pen-to-square"></i> Write a Review</button>
+
+  <div class="reviews-filter-bar">
+    <div>Reviews (3)</div>
+    <div>Most Recent <i class="fa-solid fa-chevron-down"></i></div>
+  </div>
+
+  <div class="review-list">
+    <div class="review-item">
+      <div class="review-header">
+        <span class="review-author">Heather</span>
+        <span>05/13/2026</span>
+      </div>
+      <div class="reviews-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <div class="review-body-title">Croissant class</div>
+      <div class="review-body-text">I loved this class! It was so well organized and thought out. I loved that while things rested we got to learn a little bit about types of flour, and processes! Really enjoyable :)</div>
+    </div>
+
+    <div class="review-item">
+      <div class="review-header">
+        <span class="review-author">Sheila</span>
+        <span>04/26/2026</span>
+      </div>
+      <div class="reviews-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <div class="review-body-title">Croissant class</div>
+      <div class="review-body-text">Excellent class - very informative and hands on. It's not so scary to make croissants! Super engaging and fun instructor and staff. Delicious treats in class and small class size. Highly recommend!</div>
+    </div>
+  </div>
+</div>
+
+<section class="company">
+  <div class="companymain">
+    <div class="dcompany">
+      <p>COMPANY</p>
+      <p>OUR STORY</p><p>MILL + BAKERY</p><p>PRESS</p><p>REVIEWS</p>
+      <div class="ddflex">
+        <div><i class="fa-brands fa-facebook-f"></i></div>
+        <div><i class="fa-brands fa-tiktok"></i></div>
+        <div><i class="fa-brands fa-instagram"></i></div>
+      </div>
+    </div>
+    <div class="dcompany">
+      <p>SHOP</p>
+      <p>LOCAL DELIVERY</p><p>FLOUR</p><p>GRAINS + BEANS</p><p>KITCHEN TOOLS</p>
+    </div>
+    <div class="dcompany">
+      <p>SUPPORT</p>
+      <p>RECIPES</p><p>FREQUENTLY ASKED QUESTIONS</p><p>CONTACT US</p>
+    </div>
+    <div class="dcompany">
+      <h3>Newsletter</h3>
+      <p>Get news, recipes and exclusive offers delivered to your inbox.</p>
+      <input class="newsletter-input" type="email" placeholder="your-email@example.com">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div><h3>© FLOURIST 2026</h3></div>
+  <div><h3>PRIVACY POLICY</h3></div>
+  <div><h3>TERMS OF SERVICE</h3></div>
+</footer>
+
+<script>
+const PRODUCTS = [
+  {
+    id:0,
+    title:"Croissant Class",
+    price:195.00,
+    img:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop",
+    subtitle:"NEW DATES WILL BE ANNOUNCED IN THE FALL!",
+    description:"We are so excited to welcome you to the bakery for our new Croissant Class! Learn how to make croissants at home step by step at our beautiful bakery.\n\nAll you have to do is show up, and we'll take you on a journey through lamination, proofing, shaping, flour, and baking..."
+  },
+  {id:1, title:"Organic Sifted Red Spring Wheat Flour", price:21.95, img:"https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=400&auto=format&fit=crop"},
+  {
+    id:2,
+    title:"Sourdough Bread Class",
+    price:195.00,
+    img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop",
+    subtitle:"NEW DATES WILL BE ANNOUNCED IN THE FALL!",
+    description:"Join us in the bakery for our hands-on Sourdough Bread Class. Learn how to mix, shape, proof, and bake a naturally leavened loaf from start to finish.\n\nYou will leave with practical techniques and the confidence to bake sourdough at home."
+  },
+  {id:3, title:"Evolutions in Bread", price:47.00, img:"https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=400&auto=format&fit=crop"},
+  {id:4, title:"Specialty Flour Bundle", price:124.95, img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400&auto=format&fit=crop"}
+];
+
+let mainQty = 1;
+let selectedProduct = PRODUCTS[0];
+let cart = [];
+
+try { 
+  const s = localStorage.getItem("fl_cart"); 
+  if(s) cart = JSON.parse(s); 
+} catch(e){}
+
+function saveCart(){ 
+  try{ localStorage.setItem("fl_cart", JSON.stringify(cart)); }catch(e){} 
+}
+
+/* Gallery switcher */
+function switchMainImage(el, productId){
+  const product = PRODUCTS.find(item => item.id === productId);
+  if(!product) return;
+
+  selectedProduct = product;
+  document.querySelectorAll('.pdp-thumbs img').forEach(img => img.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('mainImage').src = el.src;
+  document.getElementById('mainImage').alt = product.title;
+  document.getElementById('pdpTitle').textContent = product.title;
+  document.getElementById('pdpSubtitle').textContent = product.subtitle;
+  document.getElementById('pdpPrice').textContent = `$${product.price.toFixed(2)}`;
+  document.getElementById('pdpDescription').innerHTML = product.description.replace(/\n\n/g, '<br><br>');
+  updateMainQty(0);
+}
+
+/* Quantity controls for PDP */
+function updateMainQty(delta){
+  mainQty += delta;
+  if(mainQty < 1) mainQty = 1;
+  
+  document.getElementById('pdpQty').textContent = mainQty;
+  const totalPrice = (selectedProduct.price * mainQty).toFixed(2);
+  document.getElementById('addToCartBtn').textContent = `ADD TO CART • $${totalPrice}`;
+}
+
+function addMainProductToCart(){
+  addToCart(selectedProduct.id, mainQty);
+}
+
+function addToCart(id, qty = 1){
+  id = +id;
+  const item = cart.find(i=>i.id===id);
+  if(item){ 
+    item.qty += qty; 
+  } else { 
+    cart.push({id, qty}); 
+  }
+  saveCart(); 
+  renderCart(); 
+  openCart();
+}
+
+function changeQty(id, delta){
+  id = +id;
+  const item = cart.find(i=>i.id===id);
+  if(!item) return;
+  item.qty += delta;
+  if(item.qty <= 0) cart = cart.filter(i=>i.id!==id);
+  saveCart(); 
+  renderCart();
+}
+
+function removeItem(id){
+  cart = cart.filter(i=>i.id!==+id);
+  saveCart(); 
+  renderCart();
+}
+
+function renderCart(){
+  const body = document.getElementById("cartBody");
+  const badge = document.getElementById("cartBadge");
+  const totalQty = cart.reduce((s,i)=>s+i.qty, 0);
+  const totalPrice = cart.reduce((s,i)=>{ 
+    const p = PRODUCTS.find(p=>p.id===i.id); 
+    return s + (p ? p.price * i.qty : 0); 
+  }, 0);
+
+  badge.textContent = totalQty;
+  badge.style.display = totalQty > 0 ? "flex" : "none";
+
+  if(cart.length === 0){
+    body.innerHTML = `
+      <div class="cart-empty">
+        <div class="cart-empty-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+        <p class="cart-empty-text">Your cart is empty.</p>
+        <button class="btn-ghost" onclick="closeCart()">CONTINUE BROWSING</button>
+      </div>`;
+    return;
+  }
+
+  const itemsHtml = cart.map(item=>{
+    const p = PRODUCTS.find(p=>p.id===item.id);
+    if(!p) return "";
+    return `
+      <div class="cart-item">
+        <img class="cart-item-img" src="${p.img}" alt="${p.title}">
+        <div class="cart-item-info">
+          <div class="cart-item-title">${p.title}</div>
+          <div class="cart-item-price">$${p.price.toFixed(2)} each</div>
+          <div class="cart-item-controls">
+            <button class="qty-btn" onclick="changeQty(${p.id},-1)">−</button>
+            <span class="qty-num">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
+            <button class="remove-btn" onclick="removeItem(${p.id})" title="Remove">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+        <div class="cart-item-total">$${(p.price*item.qty).toFixed(2)}</div>
+      </div>`;
+  }).join("");
+
+  body.innerHTML = `
+    <div class="cart-items-list">${itemsHtml}</div>
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span class="summary-label">Subtotal (${totalQty} item${totalQty!==1?"s":""})</span>
+        <span class="summary-total">$${totalPrice.toFixed(2)}</span>
+      </div>
+      <p class="summary-note">Shipping and taxes calculated at checkout</p>
+      <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+      <button class="btn-ghost" style="display:block;margin:0 auto" onclick="closeCart()">CONTINUE SHOPPING</button>
+    </div>`;
+}
+
+function renderCards(){
+  const gridProducts = PRODUCTS.filter(p => p.id !== 0);
+  document.getElementById("cardsContainer").innerHTML = gridProducts.map(p=>`
+    <div class="grid-card" onclick="addToCart(${p.id}, 1)">
+      <img src="${p.img}" alt="${p.title}" loading="lazy">
+      <div class="grid-card-title">${p.title}</div>
+      <div class="grid-card-price">$${p.price.toFixed(2)}</div>
+    </div>`).join("");
+}
+
+function openCart(){
+  document.getElementById("cartPanel").classList.add("open");
+  document.getElementById("overlay").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCart(){
+  document.getElementById("cartPanel").classList.remove("open");
+  document.getElementById("overlay").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+renderCards();
+renderCart();
+
+document.getElementById("cartIconWrap").addEventListener("click", openCart);
+document.getElementById("closeCart").addEventListener("click", closeCart);
+document.getElementById("overlay").addEventListener("click", closeCart);
+</script>
+</body>
+</html>

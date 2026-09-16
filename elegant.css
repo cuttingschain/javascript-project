@@ -1,0 +1,169 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+nav{
+width: 100%;
+height: 9vh;
+background-color: black;
+}
+nav ul{
+display: flex;
+justify-content: space-between;
+}
+nav ul li{
+padding-left: 100px;
+padding-top: 25px;
+}
+nav ul a{
+color: white;
+padding-right: 50px;
+padding-top: 35px;
+font-size: 19px;
+text-decoration: none;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.elegantrest{
+width: 100%;
+height: 59vh;
+background-image: url(https://elegencia.pixcelsthemes.com/livepreview/img/lading-bg.png);
+text-align: center;
+}
+.elegantrest em{
+color: #b59e75;
+font-size: 19px;
+display: block;
+padding-top: 220px;
+}
+.elegantrest span{
+color: white;
+font-size: 60px;
+}
+.elegantrest h2{
+color: white;
+font-size: 50px;
+}
+.elegantrest h2 span{
+color: #b59e75;
+font-family: serif; 
+}
+.elegantrest .buynoew a{
+width: 8%;
+height: 60px;
+display: inline-block;
+text-decoration: none;
+color: black;
+background-color: #ffffff;
+border-radius: 15px;
+font-size: 18px;
+line-height: 60px;
+margin-top: 30px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: rgb(70, 64, 64);
+transition: all 0.3s ease;
+}
+.elegantrest .buynoew :hover{
+color: rgb(235, 168, 44);
+}
+.retreat{
+width: 100%;
+height: 80vh;
+background-color: black;
+}
+.retreat .maindiv{
+width: 90%;
+height: auto;
+display: flex;
+justify-content: center;
+gap: 280px;
+}
+.retreat .maindiv div{
+width: 33%;
+height: auto;
+}
+.retreat .maindiv div img{
+width: 140%;
+height: 50vh;
+margin-top: 150px;
+transition: transform 1.0s ease;
+}
+.retreat .maindiv div :hover{
+    transform: scale(1.1);
+}
+.homepage{
+width: 100%;
+height: 100vh;
+background-color: black
+}
+.homepage .divh2{
+color: #fed58d;
+text-align: center;
+}
+.homepage .divh2 em{
+font-size: 18px;
+display: block;
+}
+.homepage .divh2 h2{
+font-size: 65px;
+padding-top: 5px;
+font-weight: 400;
+}
+.homepage .maindivimg{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 50px;
+}
+.homepage .maindivimg img{
+width: 33%;
+height: 400px;
+}
+.AllHotel{
+width: 100%;
+height: 300vh;
+background-color: black;
+text-align: center;
+padding-top: 50px;
+}
+.AllHotel h2 .a1{
+font-weight: 500;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 18px;
+text-decoration: none;
+color: #fed58d;
+}
+.AllHotel h2 .a2{
+color: #5d5d5d;
+text-decoration: none;
+font-size: 20px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 400;
+}
+.AllHotel .maindiv2{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 50px;
+display: flex;
+flex-wrap: wrap;
+gap: 55px;
+}
+.AllHotel .maindiv2 div{
+width: 30%;
+height: auto;
+}
+.AllHotel .maindiv2 div img{
+width: 100%;
+/* height: 100%; */
+}
+footer{
+width: 100%;
+height: 55vh;
+text-align: center;
+background-image: url(https://elegencia.pixcelsthemes.com/livepreview/img/bottom_bg.png);
+}
+
+
+
+

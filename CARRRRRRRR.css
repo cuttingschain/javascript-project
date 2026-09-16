@@ -1,0 +1,229 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul{
+display: flex;
+gap: 20px;
+list-style: none;
+}
+nav ul li a{
+text-decoration: none;
+color: #050000;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 18px;
+}
+nav h1{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 22px;
+color: #050000;
+}
+
+header{
+width: 100%;
+height: 80vh;
+background-image: url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg);
+text-align: center;
+padding-top: 200px;
+}
+header h1{
+font-size:  110px;
+font-family: Arial, Helvetica, sans-serif;
+color: #818181;
+}
+header p{
+font-size: 20px;
+color: #838383;
+font-family: Arial, Helvetica, sans-serif;
+}
+header button{
+width: 11%;
+height: 65px;
+margin-top: 50px;
+border-radius: 9px;
+background-color: #64a19c;
+color: white;
+border-color:  #64a19c;
+}
+.sec1{
+width: 100%;
+height: 59vh;
+background-image: url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/ipad.png);
+background-repeat: no-repeat;
+text-align: center;
+background-color: #474747;
+color: white;
+padding-top: 100px;
+}
+.sec1 p{
+padding-top: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+color: white;
+}
+.sec1 p a{
+color: aquamarine;   
+}
+
+.sec2{
+width: 100%;
+height: 55vh;
+display: flex;
+text-align: center;
+}
+.sec2 img{
+width: 40%;
+height: 45vh;
+margin-left: 100px;
+margin-top: 100px;
+}
+.sec2 h1{
+padding-top: 300px;   
+padding-left: 86px;
+font-family: sans-serif;
+font-size: 20px;
+color: #25272a;
+}
+.sec2 p{
+padding-left: 86px;
+padding-top: 8px;
+font-family: sans-serif;
+font-size: 15px;
+color: #9c9e9f;
+}
+.sec3{
+width: 100%;
+height: auto;
+padding: 70px 0;
+}
+.ownercars{
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+margin: auto;
+padding-left: 100px;
+}
+.carprice{
+width: 66vh;
+height: auto;
+background-color: black;
+color: white;
+text-align: center;
+padding-top: 200px;
+}
+.carprice h1{
+font-size: 25px;
+}
+.carprice p{
+font-size: 18px;
+color: #5c5c5c;
+padding-top: 10px;
+}
+
+.sec4{
+width: 100%;
+height: 60vh;
+background-image: url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-signup.jpg);
+text-align: center;
+padding-top: 230px;
+}
+.sec4 i{
+font-size: 54px;
+color: white;
+}
+.sec4 h1{
+font-size: 29px;
+color: white;
+padding-top: 10px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sec4 input{
+width: 33%;
+height: 62px;
+margin-top: 34px; 
+border-radius: 8px;  
+padding-left: 29px;
+border: white;
+font-size: 15px;
+}
+.sec4 button{
+width: 8%;
+height: 58px;
+border-radius: 7px;
+color: white;
+background-color: #537d79;
+}
+.sec5{
+width: 100%;
+height: 38vh;
+background-color: #383838;
+display: flex;
+
+justify-content: center;
+}
+.sec5 div{
+text-align: center;
+padding-top: 100px;
+margin-top: 80px;
+}
+.sec5 div pre{
+font-size: 45px;
+color: #60a39a;
+}
+.sec5 div{
+color: #60a39a;
+}
+.carss1{
+width: 25%;
+height: 25vh;
+background-color: white;
+border-radius: 8px;
+}
+.carss2{
+width: 25%;
+height: 25vh;
+background-color: white;
+margin-left: 100px;
+border-radius: 8px;
+}
+.carss3{
+width: 25%;
+height: 25vh;
+background-color: white;
+margin-left: 100px;
+border-radius: 8px;
+}
+.sec5 p a{
+color: #60a39a;;
+}
+.sec6{
+width: 100%;
+height: 10vh;
+background-color: #727272;
+padding-left: 100px;
+}
+.s111{
+width: 60px;
+height: auto;
+font-size: 35px;
+border-radius: 15px;
+float: left;
+}
+footer{
+width: 100%;
+height: 10vh;
+background-color: #727272;
+text-align: center;
+font-size: 12px;
+color: #1b1b1b;
+}

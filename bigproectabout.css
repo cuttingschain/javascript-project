@@ -1,0 +1,343 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+nav{
+width: 100%;
+height: 44.90vh;
+position: relative;
+background-image: url(https://htmltemplate.akatheme.com/retation/images/about/about.jpg);
+}
+.slide{
+position: relative;
+}
+nav .retationnav ul{
+position: absolute;
+display: flex;
+top: 13%;
+gap: 100px;
+left: 35%; 
+}
+nav .retationnav ul li a{
+position: relative;
+top: 50%;
+text-decoration: none;
+color: white;
+}
+nav .retationnav ul li{
+list-style: none;
+}
+nav .retationnav ul li :hover{
+color: #ff7300;
+}
+nav .ul2 li a{
+color: white;
+text-decoration: none;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav .ul2 li{
+list-style: none;
+font-weight: 700;
+}
+nav .ul2{
+width: 38%;
+height: auto;
+display: flex;
+gap: 50px;
+position: relative;
+top: 175px;
+left: 32%;
+font-size: 16.3px;
+}
+nav .ul2 :hover{
+color: #ff9b3d;
+}
+.welcome{
+width: 100%;
+height: 50vh;
+background-image: url(https://htmltemplate.akatheme.com/retation/images/home/info/info-bg.jpg);
+background-position: 100%;
+background-repeat: no-repeat;   
+}
+.welcome .welcomemain{
+width: 60%;
+height: auto;
+margin: auto;
+display: flex;
+}
+.welcome .welcomemain .left{
+margin-top: 100px;
+}
+.welcome .welcomemain .left h1{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 600;
+font-size: 32px;
+}
+.welcome .welcomemain .right{
+width: 50%; 
+height: auto;
+}
+.welcome .welcomemain .left p{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 14.4px;
+color: rgb(99, 93, 93);
+padding: 10px 0 0;
+}
+.welcome .welcomemain div .img1{
+position: absolute;
+top: 70.5%;
+left: 60%;
+animation-name: welcomeimg;
+animation-duration: 0.7s;
+animation-timing-function: ease;
+animation-fill-mode: forwards;
+}
+@keyframes welcomeimg{
+from{margin-wleft: 300px;}
+to{margin-right: 500px;}
+}
+.welcome .welcomemain div .img2{
+position: relative;
+top: 50px;
+left: 29%;
+animation-name: welcomeimg;
+animation-duration: 1.4s;
+animation-timing-function: ease;
+animation-fill-mode: forwards;
+}
+@keyframes welcomeimg{
+from{margin-left: 300px;}
+to{margin-right: 500px;}
+}
+.ourmission{
+width: 100%;
+height: 40vh;
+background-color: #eee6d9;
+}
+.ourmission .mainour{
+width: 65%;
+height: auto;
+display: flex;
+margin: auto;
+}
+.ourmission .mainour .leftmain{
+width: 50%;
+height: auto;
+}
+.ourmission .mainour .leftmain img{
+width: 450px;
+height: 52vh;
+position: relative;
+bottom: 60px;
+left: 90px;
+width: 450px; /* конечный размер */
+animation: zoomIn 1.5s ease-out forwards;
+}
+ @keyframes zoomIn {
+   from {
+        transform: scale(0.1); /* очень маленькая, как издалека */
+        opacity: 0;            /* можно добавить плавное появление */
+      }
+      to {
+        transform: scale(1);   /* нормальный размер */
+        opacity: 1;
+      }
+ }
+.ourmission .mainour .rightmain{
+width: 60%;
+height: auto;
+}
+.ourmission .mainour .rightmain h1{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+padding-top: 40px;
+font-size: 34px;
+}
+.ourmission .mainour .rightmain div h5{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 12px;
+padding-top: 20px;
+}
+.ourmission .mainour .rightmain div p{
+padding-top: 10px;
+font-size: 14.3px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(117, 104, 104);
+}
+.ourpromise{
+width: 100%;
+height: 40vh;
+}
+.ourpromise .mainpromise{
+width: 70%;
+height: auto;
+display: flex;
+margin: auto;
+margin-top: 50px;
+}
+.ourpromise .mainpromise .leftpromise{
+width: 60%;
+height: auto;
+}
+.ourpromise .mainpromise .leftpromise h1{
+padding-top: 100px;
+padding-left: 100px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+padding-bottom: 10px;
+}
+.ourpromise .mainpromise .leftpromise p{
+padding-left: 100px;
+font-size: 14.2px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(110, 104, 104);
+}
+.ourpromise .mainpromise .rightpromise{
+width: 50%;
+height: auto;
+}
+.ourpromise .mainpromise .rightpromise img{
+width: 450px;
+height: 30vh;
+margin-left: 50px;
+margin-top: 40px;
+animation-name: ourpromise;
+animation-duration: 1s;
+}
+@keyframes ourpromise{
+from{margin-top: 300px;}
+to{margin-bottom: 20px;}
+}
+.allimg{
+width: 100%;
+height: 34vh;
+}
+.allimgmain{
+display: flex;
+}
+.allimg .allimgmain .allimg6 img{
+width: 100px;
+height: 34.50vh;
+}
+.ourmethods{
+width: 100%;
+height: 42vh;
+}
+.ourmethods .ourmetmain{
+width: 70%;
+height: auto;
+display: flex;
+margin: auto;
+}
+.ourmethods .ourmetmain .ourmetleft{
+width: 50%;
+height: auto;
+margin-top: 70px;
+}
+.ourmethods .ourmetmain .ourmetleft img{
+width: 270px;
+height: 26vh;
+}
+.ourmethods .ourmetmain .ourmetleft .ourimg1{
+position: relative;
+left: 130px;
+top: 3px;
+}
+.ourmethods .ourmetmain .ourmetleft .ourimg2{
+width: 270px;
+height: 310px;
+}
+.ourmethods .ourmetmain .ourmetright{
+width: 50%;
+height: auto;
+margin-top: 90px;
+}
+.ourmethods .ourmetmain .ourmetright h1{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 600;
+}
+.ourmethods .ourmetmain .ourmetright div p{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 14.3px;
+color: rgb(121, 109, 109);
+padding-top: 10px;
+}
+footer{
+width: 100%;
+height: 37vh;
+background-color: #eee6d9;
+}
+footer .footmain{
+width: 60%;
+height: auto;
+display: flex;
+justify-content: space-between;
+margin: auto;
+}
+footer .footmain div h1{
+font-size: 22px;
+padding-top: 50px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+footer .footmain div p{
+font-size: 15px;
+color: rgb(104, 94, 94);
+padding-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-bottom: 10px;
+} 
+footer .footmain .footermaindiv1 div span i{
+font-size: 20px;
+color: #5b5d6b;
+}
+footer .footmain .footermaindiv1 div span{
+color: rgb(104, 94, 94);
+}
+footer .footmain .footermaindiv2 ul{
+list-style: none;
+}
+footer .footmain .footermaindiv2 ul li a{
+text-decoration: none;
+color: #5b5d6b;
+font-size: 15px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer .footmain .footermaindiv3 form input{
+width: 120%;
+height: 29px;
+margin: 5px;
+background-color: #eee6d9;
+border: solid 1px;
+padding-left: 7px;
+border-color: rgb(172, 160, 160);
+}
+footer .footmain .footermaindiv3 button{
+width: 50%;
+height: 34px;
+margin-left: 5px;
+margin-top: 5px;
+color: white;
+background-color: black;
+border: solid 1px;
+border-color: black;
+cursor: pointer;
+}
+footer .footmain .footermaindiv4 .followusfinal{
+display: flex;
+gap: 8px;
+}
+footer .footmain .footermaindiv4 .followusfinal div{
+width: 30px;
+height: 30px;
+border: solid 1px;
+text-align: center;
+padding-top: 3px;
+background-color: white;
+border-color: white;
+}
+footer .footmain .footermaindiv4 .followusfinal div a i{
+font-size: 17px;
+color: black;
+}

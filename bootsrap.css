@@ -1,0 +1,200 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.Generate{
+width: 100%;
+height: auto;
+background-color: rgb(11, 11, 83);
+}
+.Generate .container h1{
+font-size: 50px;
+color: white;
+padding-top: 100px;
+}
+.Generate .container form{
+    width: 55%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.Generate .container form input{
+width: 80%;
+height: 60px;
+}
+.Generate .container form button{
+width: 15%;
+height: 60px;
+margin-left: 20px;
+}
+@media(max-width:768px){
+.Generate .container h1{
+font-size: 29px;
+padding-bottom: 50px;
+}       
+.Generate .container form{
+width: 90%;
+justify-content: flex-start;
+}
+.Generate .container form input{
+width: 400px;
+height: 60px;
+}
+.Generate .container form button{
+width: 50%;
+height: 60px;
+margin: auto;
+}
+}
+.fully{
+width: 100%;
+height: auto;
+
+}
+.fully .container{
+/* margin: auto; */
+margin-top: 35px;
+text-align: center;
+}
+.fully div i{
+font-size: 69px;
+color: #0a74f5;
+}
+.fully div h2{
+padding-top: 15px;
+font-size: 30px;
+}
+.fully div p{
+font-size: 18px;
+padding-top: 3px;
+}
+.responsive{
+width: 100%;
+height: auto;
+}
+.responsive .col-sm-6{
+
+  padding: 0;
+}
+.responsive .col-sm-6 img{
+width: 100%;
+height: 50vh;
+}
+.responsive .text{
+width: 100%;
+height: 50vh;
+padding-top: 200px;
+padding-left: 100px;
+}
+.responsive .text h1{
+font-size: 34px;
+}
+.responsive .text p{
+font-size: 20px;
+}
+.what-people{
+width: 100%;
+height: auto;
+background-color: #f8f9fb;
+padding-bottom: 90px;
+}
+.what-people h1{
+font-size: 32px;
+font-weight: 600;
+padding-top: 60px;
+}
+.by-bg img{
+width: 47%;
+height: 200px;
+border-radius: 100%;
+margin-top: 50px;
+}
+.what-people h4{
+font-size: 20px;
+padding-top: 13px;
+}
+.ready{
+width: 100%;
+height: 34vh;
+background-color: #4d6583;
+}
+.ready .bt-gy h1{
+padding-top: 90px;
+font-size: 33px;
+color: white;
+}
+.ready .container form{
+    width: 55%;
+    margin: auto;
+    margin-top: 29px;
+    margin-bottom: 200px;
+}
+.ready .container form input{
+width: 70%;
+height: 60px;
+font-size: 19px;
+padding-left: 20px;
+}
+.ready .container form button{
+width: 14%;
+height: 60px;
+margin-left: 20px;
+font-size: 18px;
+background-color: #296ad4;
+color: #a8bcd4;
+}
+@media(max-width:768px){
+.ready .container form{
+width: 90%;
+justify-content: flex-start;
+}
+.ready .container form input{
+width: 400px;
+height: 60px;
+}
+.ready .container form button{
+width: 50%;
+height: 60px;
+margin: auto;
+}
+}
+footer{
+width: 100%;
+height: 12vh;
+}
+footer .mainfooter{
+width: 65%;
+height: auto;
+margin: auto;
+display: flex;
+justify-content: space-between;
+margin-top: 70px;
+}
+footer .mainfooter .leftfooter{
+width: 45%;
+height: auto;
+}
+footer .mainfooter .leftfooter a{
+font-size: 15px;
+}
+footer .mainfooter .leftfooter i{
+font-size: 2px;
+padding: 10px;
+}
+footer .mainfooter .leftfooter p{
+font-size: 14px;
+color: rgb(136, 128, 128);
+}
+footer .mainfooter .rightfooter i{
+font-size: 29px;
+margin-left: 20px;
+color: #086efe;
+}
+
+
+
+
+
+
+

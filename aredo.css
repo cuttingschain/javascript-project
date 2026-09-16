@@ -1,0 +1,368 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.arredo{
+width: 100%;
+height: 60vh;
+background-color: rgb(255, 255, 255);
+}
+.arredodiv{
+display: flex;
+justify-content: space-between;
+padding-top: 30px;
+}
+.arredo .arredodiv div #id2{
+width: 15%;
+height: auto;
+position: absolute;
+top: 30%;
+left: 39%;
+color: black;
+}
+.arredodiv img{
+width: 7%;
+height: 33px;
+margin-left: 40px;
+margin-top: 10px;
+}
+.arredodiv a{
+width: 6.3%;
+height: 44px;
+border: solid 1px;
+border-color: rgb(0, 0, 0);
+background-color: white;
+border-radius: 1px;
+margin-right: 100px;
+font-size: 14px;
+margin-top: 15px;
+text-align: center;
+padding-top: 10px;
+text-decoration: none;
+color: rgb(70, 64, 64);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+.arredodiv #id1{
+width: 8.7%;
+height: 270px;
+left: 23%;
+bottom: 70px;
+position: relative;
+}
+.arredo .tnz div #id1{
+bottom: 180px;
+position: relative;
+}
+.arredo .tnz div #id3{
+position: relative;
+left: 25%;
+}
+.arredo .tnz div #id4{
+right: 9%;
+position: absolute;
+top: 36%;
+right: 15%;
+}
+.arredo .tnz div img{
+margin-left: 70px;
+bottom: 145px;
+}
+.arredo .tnz div #id2{
+width: 30%;
+right: 240px;
+position: relative;
+}
+.img{
+width: 100%;
+height: auto;
+background-color: #f7f6f4;
+}
+.img .img2{
+width: 90%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 60px;
+margin: auto;
+}
+.img .img2 div{
+width: 33%;
+height: auto;
+margin-top: 150px;
+}
+.img .img2 div img{
+width: 90%;
+height: auto;
+transition: transform 0.8s ease;
+}
+.img .img2 div :hover{
+transform: scale(0.9);
+}
+.img .img2 div h5{
+text-align: center;
+font-size: 15px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+.woocom{
+width: 100%;
+height: 90vh;
+background-color: #e6edf5;
+text-align: center;
+padding-top: 150px;
+}
+.woocom .woocomimg{
+width: 33%;
+height: auto;
+display: flex;
+gap: 100px;
+margin-top: 60px;
+}
+.woocom .woocomimg img{
+width: 90%;
+height: auto;
+}
+.woocom .woocomimg .wocomimgleft{
+position: relative;
+right: 100px;
+}
+.woocom .woocomimg .wocomimgright{
+position: relative;
+}
+.woocom h2{
+font-size: 35px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+.woocom h4{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 400;
+color: rgb(122, 113, 113);
+font-size: 18px;
+padding-top: 13px;
+}
+.shoptemplates{
+width: 100%;
+height: 135vh;
+text-align: center;
+}
+.shoptemplates h2{
+padding-top: 65px;
+font-size: 37px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+.shoptemplates h4{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 400;
+font-size: 18px;
+padding-top: 19px;
+color: rgb(122, 113, 113);;
+}
+.shoptemplates .shopgrid{
+width: 90%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+margin: auto;
+margin-top: 75px;
+}
+.sekil2{
+display: none;
+}
+.shopdiv:hover .sekil1 {
+display: none;
+}
+.shopdiv:hover .sekil2{
+display: block;
+}
+.sekil2{
+width: 55%;
+height: 290px;
+}
+.shoptemplates .shopgrid  .shopdiv h3{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+margin-top: 20px;
+margin-bottom: 20px;
+font-size: 15px;
+color: rgb(70, 61, 61);
+}
+.shoptemplates .shopgrid .shopdiv{
+width: 33%;
+height: auto;
+}
+.shoptemplates .shopgrid .shopdiv img{
+width: 50%;
+height: 290px;
+margin: auto;
+}
+.portfolio{
+width: 100%;
+height: 83vh;
+background-color: #f7f6f4;
+}
+.portfolio .portfoliomain{
+width: 90%;
+height: auto;
+display: flex;
+justify-content: space-between;
+margin: auto;
+}
+.portfolio .portfoliomain .left{
+width: 33%;
+height: auto;
+}
+.portfolio .portfoliomain .left h2{
+text-align: center;
+padding-left: 100px;
+padding-top: 400px;
+font-size: 35px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+.portfolio .portfoliomain .left h4{
+font-size: 17px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 400;   
+text-align: center;
+padding-left: 34px;
+color: rgb(107, 102, 102);
+padding-bottom: 30px;
+padding-top: 20px;
+}
+.portfolio .portfoliomain .left div a{
+padding: 14px 30px;
+border-radius: 3px;
+border: solid 1px;
+color: black;
+text-decoration: none;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: black;
+font-size: 13px;
+font-weight: 500;
+position: absolute;
+left: 23.5%;
+}
+.portfolio .portfoliomain .left div :hover{
+background-color: black;
+color: white;
+}
+.portfolio .portfoliomain .right{
+width: 50%;
+height: auto;
+margin-top: 150px;
+}
+.portfolio .portfoliomain .right #rightimg1{
+width: 30%;
+height: auto;
+position: absolute;
+left: 50%;
+margin-top: 100px;
+}
+.portfolio .portfoliomain .right #rightimg2{
+position: relative;
+left: 17%;
+}
+.getblogging{
+width: 100%;
+height: 80vh;
+background-color:  #f7f6f4;;
+}
+.getblogging .getbloggingmain{
+width: 90%;
+height: auto;
+display: flex;
+justify-content: space-between;
+}
+.getblogging .getbloggingmain .getbloggingleft{
+width: 33%;
+height: auto;
+margin-top: 100px;
+}
+.getblogging .getbloggingmain .getbloggingleft #leftimg1{
+width: 30%;
+height: 48vh;
+position: absolute;
+left: 17.4%;
+}
+.getblogging .getbloggingmain .getbloggingleft #leftimg2{
+position: relative;
+bottom: 10%;
+}
+.getblogging .getbloggingmain .getbloggingright{
+width: 33%;
+height: auto;
+padding-top: 400px;
+}
+.getblogging .getbloggingmain .getbloggingright h2{
+font-size: 38px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+padding-bottom: 17px;
+}
+.getblogging .getbloggingmain .getbloggingright h4{
+font-size:  17px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 400; 
+color: rgb(107, 102, 102);
+padding-bottom: 40px;
+}
+.getblogging .getbloggingmain .getbloggingright div :hover{
+color: white;
+background-color: black;
+}
+.getblogging .getbloggingmain .getbloggingright div a{
+padding: 14px 30px;
+border-radius: 3px;
+border: solid 1px;
+color: black;
+text-decoration: none;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: black;
+font-size: 13px;
+font-weight: 500;
+}
+footer{
+width: 100%;
+height: 55vh;
+background-image: url(https://romatti.ru/upload/iblock/fb3/tcbn1j9fenjn8frc9p12zlai60ffnxf7.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+color: white;
+text-align: center;
+padding-top: 130px;
+}
+footer h2{
+font-size: 58px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+padding-bottom: 25px;
+}
+footer h4{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 400;
+font-size: 17px;
+padding-bottom: 40px;
+}
+footer div a{
+padding: 15px 45px;
+border-radius: 3px;
+border: solid 1px;
+color: black;
+text-decoration: none;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(255, 255, 255);
+font-size: 14px;
+font-weight: 500;
+}
+footer div :hover{
+color: white;
+background-color: black;
+}

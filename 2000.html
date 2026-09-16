@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baker Coffee — Вкус и атмосфера</title>
+  <meta name="description" content="Кофейня Baker: авторские напитки, свежая выпечка и тёплая атмосфера." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Baker Coffee — главная">
+        <img src="assets/logo.svg" alt="Baker Coffee" class="brand-logo" />
+        <span class="brand-name">Baker Coffee</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Главное меню">
+        <ul class="nav-list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="banner">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title">Кофе, который хочется запомнить</h1>
+        <p class="hero-subtitle">Спешелти зёрна, ручные методы, свежая выпечка — уют в каждой чашке.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="menu.html">Смотреть меню</a>
+          <a class="btn btn-outline" href="about.html">Узнать о нас</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section">
+      <div class="container">
+        <h2 class="section-title">Почему нас выбирают</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <img src="assets/icons/bean.svg" alt="" aria-hidden="true">
+            <h3>Выбор зёрен</h3>
+            <p>Односортные и бленды от обжарщиков, которых мы знаем лично.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/icons/handbrew.svg" alt="" aria-hidden="true">
+            <h3>Ручные методы</h3>
+            <p>V60, аэропресс, Chemex — раскрываем вкус на максимум.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/icons/croissant.svg" alt="" aria-hidden="true">
+            <h3>Свежая выпечка</h3>
+            <p>Круассаны и десерты из собственной пекарни, каждый день.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-highlight section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Популярные позиции</h2>
+          <a class="link" href="menu.html">Все категории →</a>
+        </div>
+        <div class="cards-grid">
+          <article class="menu-card">
+            <img src="assets/menu/flatwhite.jpg" alt="Флэт уайт" />
+            <div class="card-body">
+              <h3>Флэт уайт</h3>
+              <p>Баланс эспрессо и бархатистой текстуры молока.</p>
+              <span class="price">7 ₼</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img src="assets/menu/cinnamonroll.jpg" alt="Синнамон ролл" />
+            <div class="card-body">
+              <h3>Синнамон ролл</h3>
+              <p>Аромат корицы и нежная глазурь — идеальная пара к кофе.</p>
+              <span class="price">5 ₼</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img src="assets/menu/cappuccino.jpg" alt="Капучино" />
+            <div class="card-body">
+              <h3>Капучино</h3>
+              <p>Классика с стабильной вкусовой кривой.</p>
+              <span class="price">6 ₼</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-preview section">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="assets/about/shop.jpg" alt="Интерьер кофейни Baker" />
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">О нашей кофейне</h2>
+          <p>Мы верим в прозрачность происхождения, честную обжарку и заботу о каждом госте.</p>
+          <a class="btn btn-outline" href="about.html">Подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-inner">
+        <h2 class="cta-title">Загляни сегодня</h2>
+        <p>Сумгаит, центр — открыты ежедневно с 08:00 до 21:00.</p>
+        <a class="btn btn-primary" href="contact.html">Как добраться</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/logo.svg" alt="" aria-hidden="true" class="brand-logo" />
+          <span class="brand-name">Baker Coffee</span>
+        </a>
+        <p class="footnote">© 2025 Baker Coffee. Все права защищены.</p>
+      </div>
+      <nav aria-label="Ссылки в футере">
+        <ul class="footer-links">
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <p><strong>Адрес:</strong> Сумгаит, центр</p>
+        <p><strong>Часы:</strong> 08:00–21:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

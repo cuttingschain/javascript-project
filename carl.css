@@ -1,0 +1,145 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+nav ul li{
+text-decoration: none;
+gap: 20px;
+list-style: none;
+
+}
+nav ul li button{
+    width: 83px;
+    height: 45px;
+    background-color: blue;
+    color: white;
+    border-radius: 7px;
+}
+.sec1{
+    text-align: center;
+    width: 100%;
+    height: 55vh;
+    background-color: aliceblue;
+    
+}
+.car1{
+padding-top: 20vh;
+}
+.car2 button{
+    width: 75px;
+    height: 45px;
+    border-radius: 7px;
+    color: white;
+    background-color: blue;
+    font-size: 15px;
+}
+.car2 input{
+    width: 15%;
+    height: 43px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.sec2{
+width: 100%;
+height: 35vh;
+background-color: whitesmoke;
+display: flex;
+justify-content: space-between;
+padding: 100px 100px;
+}
+.nigcar3{
+width: 28%; 
+}
+.car4{
+width: 28%;   
+}
+.car5{
+width: 28%;
+}
+i{
+font-size: 70px;
+color: blue;
+}
+.sec3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.car6{
+    width: 50%;
+    height: 55vh;
+    text-align: center;
+}
+.car6 img{
+width: 100%;
+height: 100%;
+}
+.car6 h1{
+    padding-top: 200px;
+}
+.sec4{
+width: 100%;
+height: 45vh;
+background-color: whitesmoke;
+text-align: center;
+padding: 50px 0;
+}
+.car7 h1{
+    text-align: center;
+}
+.car7 img{
+width: 200px;
+height: 200px;
+border-radius: 100%;
+object-fit: cover;
+}
+.car7{
+    width: 80%;
+    margin: auto;
+display: flex; 
+justify-content: space-around ;
+margin-top: 50px;
+}
+.sec5{
+width: 100%;
+height: 25vh;
+background-color: aquamarine;
+}
+.sec5 input{
+    width: 21%;
+    height: 54px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+.sec5 h1{
+    padding-top: 30px;
+    padding-bottom: 23px;
+}
+.sec5 button{
+width: 4%;
+height: 58px;
+border-radius: 7px;
+color: white;
+background-color: blue;
+}
+.sec6{
+    width: 100%;
+    height: 150px;
+    background-color: whitesmoke;
+}
+.car8{
+    padding-top: 30px;
+}
+

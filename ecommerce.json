@@ -1,0 +1,93 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Zucchini Tomato Ricotta Galette",
+      "description": "This recipe is perfect for late summer and into early fall...",
+      "price": 10.99,
+      "image": "https://flourist.com/cdn/shop/articles/FullSizeRender_VSCO_117.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Chickpea, Fava Bean + Pea Salad",
+      "description": "Make this salad at the start of summer...",
+      "price": 11.53,
+      "image": "https://flourist.com/cdn/shop/articles/IMG_9671_VSCO.jpg"
+    },
+     {
+    "id":3,
+    "title": "Oatmeal Rye Crinkle Cookies",
+    "description": "These cookies are so delicious and a perfect way to enjoy both Oats and Rye, two of our favourite grains. Flourist Whole Grain Rye Flour...",
+    "price": 13.99,
+    "image": "https://flourist.com/cdn/shop/articles/FullSizeRender_VSCO_85_5c934fe3-1b09-4577-91e3-dc984f764d49.jpg?height=332&v=1749013491&width=600"
+    },
+    {
+    "id":4,
+    "title": "Chickpea + Asparagus Salad",
+    "description": "Try this salad when Asparagus is at it's peak. Substitute feta for goat cheese depending on what's available. Serve with baguette or any fresh sourdough. Chickpea...",
+    "price": 10.55,
+    "image": "https://flourist.com/cdn/shop/articles/6C2109CE-E8CC-467D-A936-948188CC4F05_c78f5242-262c-47b7-9d4f-be495de7a116.jpg?height=399&v=1746033995&width=600"
+    },
+    {
+    "id":5,
+    "title": "Spiced Farro + Carrot Salad",
+    "description": "This salad is a variation of this one we first shared years ago. The flavours mingle perfectly together to create a fresh, brightly flavoured dish...",
+    "price": 12.30,
+    "image": "https://flourist.com/cdn/shop/articles/IMG_5507_VSCO.jpg?height=338&v=1748807762&width=600"
+    },
+    {
+    "id":6,
+    "title": "Simple Oat Pancakes",
+    "description": "These easy to make, wholesome pancakes are made using only four core (and high protein!) ingredients. Featuring our new Organic Rolled Oats, this is a...",
+    "price": 11.53,
+    "image": "https://flourist.com/cdn/shop/articles/FullSizeRender_VSCO_76.jpg?height=401&v=1743350624&width=600"
+    },
+    {
+    "id":7,
+    "title": "Mezze Platter",
+    "description": "It's no secret we are huge fans of eating well and simply, and we think this philosophy is represented perfectly here with this gorgeous...",
+    "price": 15.99,
+    "image": "https://flourist.com/cdn/shop/articles/EA45C7A0-CDA0-4965-98E2-F3F44D9BB148.jpg?height=399&v=1776633473&width=600"
+    },
+    {
+    "id":8,
+    "title": "French Lentil + Olive Salad",
+    "description": "This simple salad can be dressed up or down depending on what you have in your fridge. We like it as is, with or without...",
+    "price": 11.99,
+    "image": "https://flourist.com/cdn/shop/articles/IMG_7623_VSCO.jpg?height=335&v=1727199602&width=600"
+    },
+    {
+    "id":9,
+    "title": "Raspberry + White Chocolate Cream Scones",
+    "description": "This is a simple, introductory recipe for cream scones. A tip is to keep the scones as cold as possible before adding them into a...",
+    "price": 9.99,
+    "image": "https://flourist.com/cdn/shop/articles/10119D4D-FF18-45E8-961F-E6FA5D2D9F3E.jpg?height=400&v=1724678391&width=600"
+    },
+    {
+    "id":10,
+    "title": "Basque Cheesecake with Blueberry Compote",
+    "description": "This show stopping dessert is for bakers of all skill levels. There’s no need for a water bath or to worry about uneven surfaces as...",
+    "price": 15.00,
+    "image": "https://flourist.com/cdn/shop/articles/FullSizeRender_VSCO_7.jpg?height=401&v=1721655121&width=600"
+    },
+    {
+    "id":11,
+    "title": "Brie + Blueberry Galette",
+    "description": "This is a double take on a summer galette we made a few years ago, this time with just blueberries and added lemon zest. Try...",
+    "price": 13.99,
+    "image": "https://flourist.com/cdn/shop/articles/IMG_3730_VSCO.jpg?height=399&v=1721655260&width=600"
+    },
+    {
+    "id":12,
+    "title": "Heirloom Tomato + Burrata Galette",
+    "description": "When tomato season arrives, everything in our kitchens shift focus to all things local tomatoes. This version of our Heirloom Tomato Galette features a simplified...",
+    "price": 9.99,
+    "image": "https://flourist.com/cdn/shop/articles/IMG_3665_VSCO_2.jpg?height=419&v=1751894678&width=600"
+    }
+
+
+  ]
+ 
+}
+    

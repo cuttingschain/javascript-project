@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ececec.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="ececec.js" defer></script>
+</head>
+<body>
+  
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flourist Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="showPage('catalog')">🌿 Flourist</div>
+  <button class="cart-btn" onclick="showPage('cart')">
+    🛒 Корзина
+    <span class="cart-count" id="cart-count">0</span>
+  </button>
+</header>
+
+<!-- CATALOG -->
+<div class="page active" id="catalog-page">
+  <div class="catalog-header">
+    <h1>Fresh Goods</h1>
+    <p>Органические продукты с ферм Британской Колумбии</p>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Поиск товаров..." oninput="filterProducts()">
+  </div>
+  <div class="grid" id="product-grid"></div>
+</div>
+
+<!-- PRODUCT -->
+<div class="page" id="product-page">
+  <button class="back-btn" onclick="showPage('catalog')">← Назад</button>
+  <div class="product-layout">
+    <img class="product-img" id="pimg" src="" alt="">
+    <div class="product-info">
+      <div class="product-title" id="ptitle"></div>
+      <div class="product-price" id="pprice"></div>
+      <div class="qty-row">
+        <span class="qty-label">Количество:</span>
+        <div class="qty-ctrl">
+          <button onclick="changeQty(-1)">−</button>
+          <div class="qty-val" id="qty-val">1</div>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+      <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+      <div class="add-toast" id="toast">✓ Добавлено в корзину!</div>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="page" id="cart-page">
+  <div class="cart-heading">Корзина</div>
+  <div id="cart-body"></div>
+</div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+    
+
+</body>
+</html>

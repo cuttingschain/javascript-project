@@ -1,0 +1,270 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+nav{
+width: 100%;
+height: 46vh;
+position: relative;
+background-image: url(https://htmltemplate.akatheme.com/retation/images/contact/contact.jpg);
+}
+.slide{
+position: relative;
+}
+nav .retationnav ul{
+position: absolute;
+display: flex;
+top: 13%;
+gap: 100px;
+left: 35%; 
+}
+nav .retationnav ul li a{
+position: relative;
+top: 50%;
+text-decoration: none;
+color: white;
+}
+nav .retationnav ul li{
+list-style: none;
+}
+nav .retationnav ul li :hover{
+color: #ff7300;
+}
+nav .ul2 li a{
+color: white;
+text-decoration: none;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav .ul2 li{
+list-style: none;
+font-weight: 700;
+}
+nav .ul2{
+width: 38%;
+height: auto;
+display: flex;
+gap: 50px;
+position: relative;
+top: 175px;
+left: 32%;
+font-size: 16.3px;
+}
+nav .ul2 :hover{
+color: #ff9b3d;
+}
+.contacts{
+width: 100%;
+height: 42vh;
+}
+.maincontacts{
+width: 80%;
+height: auto;
+display: flex;
+margin: auto;
+justify-content: space-between;
+}
+.maincontacts .leftdiv{
+width: 50%;
+height: auto;
+margin-top: 50px;
+margin-left: 100px;
+}
+.maincontacts .leftdiv h3{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 21px;
+font-weight: 500;
+padding-bottom: 21px;
+}
+.maincontacts .leftdiv p{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 14px;
+color: rgb(119, 110, 110);
+padding-bottom: 20px;
+}
+.maincontacts .leftdiv form input{
+width: 30%;
+height: 40px;
+margin-right: 20px;
+padding-left: 10px;
+margin-bottom: 20px;
+}
+.maincontacts .leftdiv form div textarea{
+width: 96.5%;
+height: 90px;
+padding-left: 8px;
+padding-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.maincontacts .leftdiv button{
+width: 22%;
+height: 45px;
+margin-top: 25px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 15px;
+border:  solid 2px;
+font-weight: 500;
+background-color: white;
+}
+.maincontacts .leftdiv .buttondiv :hover{
+color: white;
+border-color: #ff7300;
+background-color: #ff7300;
+}
+.maincontacts .rightdiv{
+width: 40%;
+height: auto;
+margin-top: 54px;
+}
+.maincontacts .rightdiv h3{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+padding-bottom: 13px;
+}
+.maincontacts .rightdiv .p{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-bottom: 10px;
+color: rgb(102, 97, 97);
+font-size: 14.5px;
+}
+.maincontacts .rightdiv .p1{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-bottom: 12px;
+color: rgb(102, 97, 97);
+font-size: 15px;
+}
+.maincontacts .rightdiv .p2{
+font-size: 15px;
+color: rgb(102, 97, 97);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.maincontacts .rightdiv h4{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+font-weight: 500;
+padding-top: 26px;
+padding-bottom: 5px;
+}
+.maincontacts .rightdiv ul{
+list-style-type: none;
+}
+.maincontacts .rightdiv ul li{
+padding-top: 3px;
+font-size: 15px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(102, 97, 97);
+}
+.maincontacts .rightdiv ul li .span1{
+padding-left: 40px;
+}
+.maincontacts .rightdiv ul li .span2{
+padding-left: 128px;
+}
+.maincontacts .rightdiv ul li .span3{
+padding-left: 110px;
+}
+.maincontacts .rightdiv ul li .span4{
+padding-left: 40px;
+}
+.maincontacts .rightdiv .ulstoremain{
+display: flex;
+gap: 50px;
+}
+.goglemaps{
+width: 100%;
+height: 40vh;
+}
+footer{
+width: 100%;
+height: 40vh;
+background-color: #eee6d9;
+}
+footer .footmain{
+width: 60%;
+height: auto;
+display: flex;
+justify-content: space-between;
+margin: auto;
+}
+footer .footmain div h1{
+font-size: 22px;
+padding-top: 70px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+footer .footmain div p{
+font-size: 15px;
+color: rgb(104, 94, 94);
+padding-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-bottom: 10px;
+} 
+footer .footmain .footermaindiv1 div span i{
+font-size: 20px;
+color: #5b5d6b;
+}
+footer .footmain .footermaindiv1 div span{
+color: rgb(104, 94, 94);
+}
+footer .footmain .footermaindiv2 ul{
+list-style: none;
+}
+footer .footmain .footermaindiv2 ul li a{
+text-decoration: none;
+color: #5b5d6b;
+font-size: 15px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer .footmain .footermaindiv3 form input{
+width: 100%;
+height: 29px;
+margin: 5px;
+background-color: #eee6d9;
+border: solid 1px;
+padding-left: 7px;
+border-color: rgb(206, 192, 192);
+}
+footer .footmain .footermaindiv3 button{
+width: 45%;
+height: 34px;
+margin-left: 5px;
+margin-top: 5px;
+color: white;
+background-color: black;
+border: solid 1px;
+border-color: black;
+cursor: pointer;
+}
+footer .footmain .footermaindiv4 .followusfinal{
+display: flex;
+gap: 8px;
+}
+footer .footmain .footermaindiv4 .followusfinal div{
+width: 30px;
+height: 30px;
+border: solid 1px;
+text-align: center;
+padding-top: 5px;
+background-color: white;
+border-color: white;
+}
+footer .footmain .footermaindiv4 .followusfinal div a i{
+font-size: 17px;
+color: black;
+}
+.hr{
+width: 100%;
+height: 1px;
+background-color: rgb(218, 202, 202);
+margin-top: 40px;
+text-align: center;
+}
+.hr p{
+padding-top: 20px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 14px;
+color: rgb(105, 98, 98);
+}
+.hr span{
+color: #ff7300;
+}

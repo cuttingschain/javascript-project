@@ -1,0 +1,60 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.kamilka{
+width: 100%;
+height: auto;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+padding-top: 200px;
+margin-bottom: 60px;
+}
+.kamilka .container .row .col-sm-2{
+width: 31%;
+height: 300px;
+background-color: rgb(126, 97, 97);
+margin: 30px auto;
+color: white;
+text-align: center;
+}
+.kamilka .container .row .col-sm-2 div a{
+text-decoration: none;
+color: white;
+font-size: 30px;
+display: block;
+padding-top: 115px;
+}
+.kamilka .container .row .col-sm-2 div :hover{
+color: black;
+}
+@media(max-width:768px){
+.kamilka .container .row{
+flex-direction: column;
+}
+}
+.nikosberber{
+width: 100%;
+height: 45vh;
+background-color: rgb(58, 58, 58);
+}
+.nikosberber .container .row .col-sm-12{
+width: 50%;
+height: 30vh;
+background-color: red;  
+margin: auto;
+text-align: center;
+margin-top: 100px;
+}
+.nikosberber .container .row .col-sm-12 h1{
+padding-top: 30px;
+}
+.nikosberber .container .row .col-sm-12 .chebate a{
+font-size: 30px;
+text-decoration: none;
+color: black;
+}
+.nikosberber .container .row .col-sm-12 .chebate :hover{
+color: white;
+}

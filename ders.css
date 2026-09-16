@@ -1,0 +1,720 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+header{
+width: 100%;
+height: 75vh;
+background-image: url(https://craftedpixels.net/demo-html/baker-coffee-html/images/hero.jpg);
+text-align: center;
+padding-top: 280px;
+padding-right: 20px;
+}
+.Baker img{
+width: 20%;
+height: 23vh;
+}
+.sec1{
+width: 100%;
+height: 60vh;
+}
+.loremstreet{
+width: 250px;
+height: 250px;
+border-radius: 50%;
+color: white;
+font-family: 'Cormorant Garamond', serif;
+text-align: center;
+padding: 35px;
+font-size: 15px;
+margin: auto;
+position: absolute;
+left: 44%;
+bottom: 15%;
+background-repeat: no-repeat;
+background-image: url(https://craftedpixels.net/demo-html/baker-coffee-html/images/circle.svg);
+}
+.Lorem{
+padding-bottom: 20px;
+font-size: 17px;
+padding-top: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(223, 206, 206);
+}
+.Weekdays{
+padding-bottom: 4px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(212, 212, 212);
+font-size: 16px;
+}
+.dessert{
+width: 90%;
+height: auto;
+display: flex;
+padding-top: 200px;
+margin: auto;
+justify-content: center;
+text-align: center;
+}
+.dessert h2{
+font-family: 'Playfair Display', serif;
+color: #444444;
+font-size: 35px;
+padding-bottom: 13px;
+}
+.dessert p{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(158, 158, 158);
+font-size: 17px;
+}
+.dessert div{
+width: 30%;
+height: auto;
+}
+.dessert div img{
+width: 40%;
+height: auto;
+}
+.Menu{
+width: 100%;
+height: 100vh;
+background-color: #252422;
+padding: 100px 0;
+color: white;
+text-align: center;
+position: relative;
+}
+.Menu h1{
+
+padding-top: 200px;
+color: white;
+font-size: 45px;
+z-index: 1000;
+position: absolute;
+left: 47.4%;
+top: 7%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Menu img{
+width: 15%;
+position: absolute;
+left: 43%;
+top: 20%;
+
+}
+.Menu .left{
+    width: 30%;
+    height: 45vh;
+    border: 1px solid wheat;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    padding: 10px;
+}
+.Menu .left div{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 5px;
+
+}
+.left div h1{
+color: #ec883c;
+font-size: 32px;
+padding-bottom: 25px;
+}
+.left div p{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 14px;
+color: #5f5b5b;
+padding-top: 3px;
+}
+.left div span{
+font-family: sans-serif;
+font-size: 15px;
+}
+.left div h3{
+font-size: 15px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.left h2{
+font-size: 35px;
+padding-right: 100px;
+color: #ec883c;
+text-decoration: underline;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+.flex{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex .flex-left{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.right div h1{
+color: #ec883c;
+font-size: 32px;
+padding-bottom: 25px;
+}
+.right div p{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 14px;
+color: #5f5b5b;
+padding-top: 3px;
+}
+.right div span{
+font-family: sans-serif;
+font-size: 15px;
+}
+.right div h3{
+font-size: 15px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.right h2{
+font-size: 35px;
+padding-right: 100px;
+color: #ec883c;
+text-decoration: underline;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+.flexx .flex-right{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.Menu .right{
+    width: 30%;
+    height: 45vh;
+    border: 1px solid wheat;
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    padding: 10px;
+}
+.Menu .right div{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 5px;
+}
+.About{
+width: 100%;
+height: 80vh;
+background-color: #f0e9d9;
+
+}
+.About h1{
+font-size: 48px;
+color: #ec883c;
+padding-left: 100px;
+padding-top: 100px;
+padding-bottom: 30px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.About p{
+padding: 10px;
+padding-left: 100px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 18px;
+color: rgb(150, 148, 148);
+}
+.About img{
+margin-left: 100px;
+margin-top: 50px;
+}
+.Gallery{
+width: 100%;
+height: 60vh;
+background-image: url(https://craftedpixels.net/demo-html/baker-coffee-html/images/sections-bg/gallery.svg);
+background-repeat: no-repeat;
+position: relative;
+}
+.Gallery div h1{
+padding-left: 100px;
+}
+
+.allalbums{
+width: 65%;
+height: auto;
+position: absolute;
+right: 9%;
+top: 30%;
+flex-direction: column;
+}
+.Gallery .allalbums h2{
+font-size: 37px;
+color: #ec883c;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ortadiv{
+display: flex;
+gap: 20px;
+padding-top: 20px;
+}
+.soldiv{
+width: 20%;
+height: 250px;
+border: groove;
+}
+.soldiv ul li{
+padding: 10px;
+text-align: end;
+padding-left: 100px;
+font-size: 18px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+list-style: none;
+}
+.soldiv ul li i{
+font-size: 7px;
+padding-left: 10px;
+padding-right: 20px;
+}
+#li1{
+color: #ec883c;
+padding-top: 30px;
+}.sagdiv{
+width: 53%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+}
+.sagdiv div{
+width: 33.3%;
+height: 16vh;  
+}
+.sagdiv img{
+width: 100%;
+height: 100%;
+}
+.Jaurnal{
+width: 100%;
+height: 85vh;
+background-color: #252422;
+display: flex;
+}
+.Jaurnal h1{
+font-size: 44px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: #cc6c23;
+}
+.journal{
+width: 90%;
+height: auto;
+}
+.journal img{
+width: 23%;
+height: 250px;
+}
+.jaurnaldiv{
+width: 33%;
+height: auto;
+}
+.jaurnaldiv div{
+width: 60%;
+height: 165px;
+background-color: #414045;
+}
+.jaurnaldiv div img{
+width: 100%;
+height: 25vh;
+}
+.jaurnaldiv2{
+width: 33%;
+height: auto;
+}
+.jaurnaldiv2 div{
+width: 33%;
+height: 200px;
+}
+.jaurnaldiv2 div img{
+width: 185%;
+height: 25vh;
+}
+.jaurnaldiv3{
+width: 33%;
+height: auto;
+}
+.jaurnaldiv3 div{
+width: 33%;
+height: 200px;
+}
+.jaurnaldiv3 div img{
+width: 185%;
+height: 25vh;
+}
+.Reservations{
+width: 100%;
+height: 80vh;
+background-color: #f0e9d9;
+}
+.böyukdiv{
+width: 90%;
+height: auto;
+display: flex;
+margin: auto;
+padding-top: 200px; 
+padding-left: 100px;
+}
+.böyukdiv div{
+width: 50%;
+height: auto;
+}
+.Reservations .böyukdiv .sol h1{
+font-family: 'Times New Roman', Times, serif;
+font-size: 45px;
+color: #cc6c23;
+padding-left: 10px;
+}
+.Reservations .böyukdiv .sol p{
+padding: 10px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 18px;
+color: rgb(117, 117, 117);
+}
+.Reservations .böyukdiv .sol h3{
+font-size: 19px;
+color: #6d5f5f;
+}
+.Reservations .böyukdiv .sol .PHONE{
+width: 40%;
+height: 8vh;
+border: solid 2px;
+padding-left: 20px;
+padding-top: 13px;
+margin-left: 10px;
+margin-top: 13px;
+}
+.Reservations .böyukdiv .sol h3 i{
+font-size: 30px;
+color: #cc6c23; 
+}
+.Reservations .böyukdiv .sol span{
+font-size: 16px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(80, 76, 76);
+padding-left: 34px;
+}
+.Reservations .böyukdiv .sağ{
+width: 50%;
+height: auto;
+border: solid 10px;
+}
+.Reservations .böyukdiv .sağ input{
+width: 40%;
+height: 5vh;
+font-size: 18px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding-left: 20px;
+}
+.Reservations .böyukdiv .sağ textarea{
+width: 80.60%;
+height: 20vh;
+display: flex;
+font-size: 18px;
+padding: 20px;
+}
+.Reservations .böyukdiv .sağ button{
+width:  80.60%;
+height: 9vh;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: rgb(104, 102, 102);
+background-color: white;
+}
+.journal{
+    width: 100%;
+    height: 108vh;
+    padding: 100px 0;
+    background-color: #252422;
+}
+
+.journal .main{
+    width: 65%;
+    height: auto;
+    margin: auto;
+}
+.journal .main h1{
+color: #cc6c23;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 45px;
+}
+.journal .main .card{
+width: 100%;
+height: 70vh;
+margin-top: 40px;
+display: flex;
+}
+.journal .main .card .left{
+    width: 33.3%;
+    height: 60vh;
+    background-color: red;
+}
+.journal .main .card .left .whitediv span{
+  display: block;
+  padding-top: 45px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+.journal .main .card .left .whitediv p{
+padding-left: 50px;
+font-size: 30px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: black;
+}
+.journal .main .card .middle{
+    width: 33.3%;
+    height: 60vh;
+}
+.journal .main .card .right{
+    width: 33.3%;
+    height: 60vh;
+
+    background-color: brown;
+}
+.journal .main .card .left .imgdiv{
+    width: 100%;
+    height: 25vh;
+}
+.journal .main .card .left .imgdiv img{
+    width: 100%;
+    height: 100%;
+}
+.journal .main .card .left .whitediv{
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+}
+.journal .main .card .left .graydiv{
+    width: 100%;
+    height: 25vh;
+    background-color: #414045;
+}
+.journal .main .card .left .graydiv p{
+font-size: 18px;
+padding-left: 50px;
+padding-top: 56px;
+color: rgb(163, 160, 160);
+}
+.journal .main .card .left .graydiv span{
+padding-top: 30px;
+display: block;
+color: white;
+font-size: 13px;
+padding-left: 50px;
+}
+.journal .main .card .middle .creamdiv{
+width: 100%;
+height: 21vh;
+background-color: #f6f2e7;
+}
+.journal .main .card .middle .creamdiv p{
+font-size: 19px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(87, 83, 83);
+padding-left: 100px;
+padding-top: 50px;
+padding-bottom: 20px;
+}
+.journal .main .card .middle .creamdiv span{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 13px;
+padding-left: 100px;
+color: rgb(87, 83, 83);
+display: block;
+}
+.journal .main .card .middle .imgdiv img{
+width: 100%;
+height: 100%;
+}
+.journal .main .card .middle .whitediv{
+width: 100%;
+height: 18vh;
+background-color: white;
+}
+.journal .main .card .middle .whitediv span{
+color: rgb(5, 0, 0);
+font-size: 15px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: block;
+padding-top: 44px;
+padding-left: 50px;
+}
+.journal .main .card .middle .whitediv p{
+font-size: 34px;
+padding-left: 50px;
+padding-top: 10px;
+}
+.journal .main .card .rightdiv .imgdiv img{
+width: 100%;
+height: 25vh;
+}
+.journal .main .card .rightdiv .whitediv{
+ width: 100%;
+ height: 20vh;
+ background-color: white;
+}
+.journal .main .card .rightdiv .whitediv span{
+display: block;
+padding-top: 40px;
+padding-left: 50px;
+}
+.journal .main .card .rightdiv .whitediv p{
+font-size: 32px;
+padding-left: 50px;
+padding-top: 15px;
+}
+.journal .main .card .rightdiv .creamdiv{
+width: 100%;
+height: 25vh;
+background-color: #f6f2e7;
+text-align: center;
+}
+.journal .main .card .rightdiv .creamdiv span{
+text-align: center;
+display: block;
+padding-top: 60px;
+}
+.journal .main .card .rightdiv .creamdiv p{
+font-size: 18px;
+padding-top: 30px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(139, 131, 131);
+}
+.Contact{
+width: 100%;
+height: 80vh;
+background-color: #fdfcf8;
+}
+.Contact .böyukdiv2{
+width: 90%;
+height: auto;
+display: flex;
+justify-content: space-around;
+}
+.Contact .böyukdiv2 .soldiv2{
+width: 33%;
+height: auto;
+}
+.Contact .böyukdiv2 .soldiv2{
+width: 33%;
+height: auto;
+}
+.Contact .böyukdiv2 .sagdiv2{
+width: 33%;
+height: auto;
+}
+.Contact .böyukdiv2 .soldiv2 h1{
+padding-left: 100px;
+font-size: 48px;
+padding-top: 100px;
+color: #cc6c23;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Contact .böyukdiv2 .soldiv2 p{
+padding-left: 100px;
+padding-top: 35px;
+color: rgb(88, 85, 85);
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding-bottom: 20px;
+}
+.Contact .böyukdiv2 .soldiv2 p i{
+color: #cc6c23;
+padding-right: 10px;
+}
+.Contact .böyukdiv2 .soldiv2 div span{
+padding-left: 100px;
+color: rgb(88, 85, 85);
+}
+.Contact .böyukdiv2 .soldiv2 div span i{
+color: #cc6c23;
+padding-right: 8px;
+}
+.Contact .böyukdiv2 .soldiv2 .icon i{
+color: #cc6c23;
+border-bottom: 20px;
+}
+.Contact .böyukdiv2 .soldiv2 .icon{
+margin-left: 100px;
+font-size: 23px;
+margin-top: 40px;
+}
+.Contact .böyukdiv2 .sagdiv2{
+width: 33%;
+height: auto;
+margin-top: 200px;
+}
+.Contact .böyukdiv2 .sagdiv2 form div input{
+width: 85%;
+height: 5vh;
+padding-left: 20px;
+color: #252422;
+}
+.Contact .böyukdiv2 .sagdiv2 .makeres{
+width: 85%;
+height: 9vh;
+text-align: center;
+font-size: 17px;
+}
+.Contact .böyukdiv2 .sagdiv2 textarea{
+width: 85%;
+height: 16vh;
+padding-left: 18px;
+padding-top: 18px;
+
+font-size: 18px;
+}
+footer{
+width: 100%;
+height: 45vh;
+background-color: #414045;
+}
+footer .footer{
+width: 90%;
+height: auto;
+display: flex;
+margin: auto;
+color: white;
+padding-top: 150px;
+padding-left: 100px;
+}
+footer .footer div{
+width: 33%;
+height: auto;
+padding-left: 100px;
+}
+footer .footer div h2{
+font-size: 18px;
+padding-bottom: 15px;
+}
+footer .footer .custommenu p{
+color: #b4783f;
+font-size: 17px;
+}
+footer .footer .custommenu i{
+padding-top: 40px;
+font-size: 24px;
+}
+footer .footer .openhours p{
+font-size: 16px;
+}
+footer .footer .openhours h3{
+padding-top: 40px;
+font-size: 17px;
+padding-bottom: 20px;
+}
+footer .footer .openhours h4{
+color: #b4783f;
+font-size: 16px;
+}
+footer .footer .imgcoffee img{
+width: 90%;
+height: auto;
+margin-left: 100px;
+}
